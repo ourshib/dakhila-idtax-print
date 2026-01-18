@@ -3,66 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print Document</title>
+    <title>Land Tax Receipt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Background color image er moto same light yellowish-green */
+        /* পুরো পেজের ব্যাকগ্রাউন্ড কালার (১ম ছবির মতো হালকা সবুজ/ক্রিম কালার) */
         body {
             background-color: #f1fadd; 
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: flex-start; /* Start from top */
-            padding-top: 50px; /* Space from top */
-            font-family: Arial, sans-serif;
+            justify-content: center; /* মাঝখানে আনার জন্য */
+            align-items: flex-start; /* উপর থেকে শুরু */
+            padding-top: 100px; /* বাটনটি একটু নিচে নামানোর জন্য */
+            font-family: 'Hind Siliguri', sans-serif;
         }
 
-        /* Button design */
+        /* প্রিন্ট বাটন ডিজাইন */
         .print-btn {
-            background-color: #3b82f6; /* Bright Blue color */
+            background-color: #4285f4; /* এক্সাক্ট নীল কালার */
             color: white;
-            text-decoration: none;
-            font-size: 50px; /* Big text size */
-            font-weight: bold;
-            padding: 20px 60px;
-            border-radius: 20px; /* Rounded corners */
+            text-decoration: none; /* আন্ডারলাইন রিমুভ */
+            font-size: 45px; /* ফন্টের সাইজ */
+            font-weight: 700; /* লিখা মোটা করার জন্য */
             
-            /* 3D Shadow effect exact image er moto */
-            box-shadow: 0px 10px 0px #2256ad; 
+            /* বাটনের সাইজ */
+            padding: 15px 50px;
+            border-radius: 15px; /* কোনা রাউন্ড করার জন্য */
             
+            /* ৩ডি শ্যাডো ইফেক্ট (নিচের গাঢ় নীল অংশ) */
+            box-shadow: 0px 8px 0px #1e55b3; 
+            border: 2px solid #1e55b3;
+
             display: inline-flex;
             align-items: center;
-            gap: 20px; /* Gap between icon and text */
-            transition: all 0.1s;
+            justify-content: center;
+            gap: 15px; /* আইকন ও লেখার মাঝের গ্যাপ */
+            
             cursor: pointer;
-            border: 2px solid #2256ad;
+            transition: all 0.1s ease; /* স্মুথ ইফেক্ট */
         }
 
-        /* Button press effect */
+        /* বাটনে চাপ দিলে বা ক্লিক করলে যে ইফেক্ট হবে */
         .print-btn:active {
-            transform: translateY(5px);
-            box-shadow: 0px 5px 0px #2256ad;
+            transform: translateY(5px); /* বাটন ৫ পিক্সেল নিচে নামবে */
+            box-shadow: 0px 3px 0px #1e55b3; /* শ্যাডো কমে যাবে */
         }
 
-        /* Icon style */
+        /* প্রিন্টার আইকন ডিজাইন */
         .icon {
-            font-size: 60px;
+            font-size: 50px;
         }
 
-        /* Bangla Font fix (Optional but good for style) */
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
-        .bangla-text {
-            font-family: 'Hind Siliguri', sans-serif;
-            margin-top: -5px; /* Alignment fix */
+        /* লেখার স্টাইল ফিক্স */
+        .text {
+            margin-top: -8px; /* বাংলা লেখাটি আইকনের সাথে সমানে আনার জন্য */
         }
     </style>
 </head>
 <body>
 
-    <a href="https://raw.githack.com/ourshib/Dakhila_Idtax/main/%E0%A6%86%E0%A6%B0%E0%A6%AE%E0%A6%BE%E0%A6%A8%20%E0%A6%86%E0%A6%B2%E0%A7%80.pdf" target="_blank" class="print-btn">
+    <a href="https://raw.githack.com/ourshib/Dakhila_Idtax/main/%E0%A6%86%E0%A6%B0%E0%A6%AE%E0%A6%BE%E0%A6%A8%20%E0%A6%86%E0%A6%B2%E0%A7%80.pdf" class="print-btn">
         <span class="icon">🖨️</span>
-        <span class="bangla-text">প্রিন্ট</span>
+        <span class="text">প্রিন্ট</span>
     </a>
 
 </body>
