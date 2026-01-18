@@ -7,58 +7,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* পুরো পেজের ব্যাকগ্রাউন্ড কালার (১ম ছবির মতো হালকা সবুজ/ক্রিম কালার) */
         body {
             background-color: #f1fadd; 
             margin: 0;
             padding: 0;
             height: 100vh;
             display: flex;
-            justify-content: center; /* মাঝখানে আনার জন্য */
-            align-items: flex-start; /* উপর থেকে শুরু */
-            padding-top: 100px; /* বাটনটি একটু নিচে নামানোর জন্য */
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 100px; /
             font-family: 'Hind Siliguri', sans-serif;
         }
 
-        /* প্রিন্ট বাটন ডিজাইন */
         .print-btn {
-            background-color: #4285f4; /* এক্সাক্ট নীল কালার */
+            background-color: #4285f4; 
             color: white;
-            text-decoration: none; /* আন্ডারলাইন রিমুভ */
-            font-size: 45px; /* ফন্টের সাইজ */
-            font-weight: 700; /* লিখা মোটা করার জন্য */
+            text-decoration: none; 
+            font-size: 45px; 
+            font-weight: 700; 
             
-            /* বাটনের সাইজ */
             padding: 15px 50px;
-            border-radius: 15px; /* কোনা রাউন্ড করার জন্য */
+            border-radius: 15px; 
             
-            /* ৩ডি শ্যাডো ইফেক্ট (নিচের গাঢ় নীল অংশ) */
             box-shadow: 0px 8px 0px #1e55b3; 
             border: 2px solid #1e55b3;
 
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 15px; /* আইকন ও লেখার মাঝের গ্যাপ */
+            gap: 15px; 
             
             cursor: pointer;
-            transition: all 0.1s ease; /* স্মুথ ইফেক্ট */
+            transition: all 0.1s ease;
         }
 
-        /* বাটনে চাপ দিলে বা ক্লিক করলে যে ইফেক্ট হবে */
         .print-btn:active {
-            transform: translateY(5px); /* বাটন ৫ পিক্সেল নিচে নামবে */
-            box-shadow: 0px 3px 0px #1e55b3; /* শ্যাডো কমে যাবে */
+            transform: translateY(5px); 
+            box-shadow: 0px 3px 0px #1e55b3; 
         }
 
-        /* প্রিন্টার আইকন ডিজাইন */
         .icon {
             font-size: 50px;
         }
 
-        /* লেখার স্টাইল ফিক্স */
         .text {
-            margin-top: -8px; /* বাংলা লেখাটি আইকনের সাথে সমানে আনার জন্য */
+            margin-top: -8px; /
         }
     </style>
 </head>
