@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PDF Viewer</title>
-  <style>
-    body {
-      background-color: #eef7e4; /* হালকা সবুজাভ রঙ (ছবির মতো) */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      font-family: "Noto Sans Bengali", sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Document</title>
+    <style>
+        /* Background color image er moto same light yellowish-green */
+        body {
+            background-color: #f1fadd; 
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: flex-start; /* Start from top */
+            padding-top: 50px; /* Space from top */
+            font-family: Arial, sans-serif;
+        }
 
-    /* প্রিন্ট বোতাম */
-    .print-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background-color: #2f7de1; /* নীল রঙ */
-      color: white;
-      font-size: 38px;
-      font-weight: bold;
-      border: none;
-      border-radius: 20px;
-      padding: 18px 50px;
-      box-shadow: 6px 6px 0px #265fb0; /* নিচে নীল ছায়া */
-      cursor: pointer;
-      margin-top: 40px;
-      transition: 0.2s ease;
-    }
+        /* Button design */
+        .print-btn {
+            background-color: #3b82f6; /* Bright Blue color */
+            color: white;
+            text-decoration: none;
+            font-size: 50px; /* Big text size */
+            font-weight: bold;
+            padding: 20px 60px;
+            border-radius: 20px; /* Rounded corners */
+            
+            /* 3D Shadow effect exact image er moto */
+            box-shadow: 0px 10px 0px #2256ad; 
+            
+            display: inline-flex;
+            align-items: center;
+            gap: 20px; /* Gap between icon and text */
+            transition: all 0.1s;
+            cursor: pointer;
+            border: 2px solid #2256ad;
+        }
 
-    .print-btn:hover {
-      background-color: #256bd0;
-      box-shadow: 6px 6px 0px #1e4f91;
-    }
+        /* Button press effect */
+        .print-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0px 5px 0px #2256ad;
+        }
 
-    iframe {
-      margin-top: 40px;
-      width: 90%;
-      height: 80vh;
-      border: 3px solid #2f7de1;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    }
-  </style>
+        /* Icon style */
+        .icon {
+            font-size: 60px;
+        }
+
+        /* Bangla Font fix (Optional but good for style) */
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
+        .bangla-text {
+            font-family: 'Hind Siliguri', sans-serif;
+            margin-top: -5px; /* Alignment fix */
+        }
+    </style>
 </head>
 <body>
-  <button class="print-btn" onclick="window.print()">🖨️ প্রিন্ট</button>
 
-  <iframe src="https://raw.githack.com/ourshib/Dakhila_Idtax/main/%E0%A6%86%E0%A6%B0%E0%A6%AE%E0%A6%BE%E0%A6%A8%20%E0%A6%86%E0%A6%B2%E0%A7%80.pdf"></iframe>
+    <a href="https://raw.githack.com/ourshib/Dakhila_Idtax/main/%E0%A6%86%E0%A6%B0%E0%A6%AE%E0%A6%BE%E0%A6%A8%20%E0%A6%86%E0%A6%B2%E0%A7%80.pdf" target="_blank" class="print-btn">
+        <span class="icon">🖨️</span>
+        <span class="bangla-text">প্রিন্ট</span>
+    </a>
+
 </body>
 </html>
